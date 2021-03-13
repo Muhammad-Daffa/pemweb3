@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<script language="javascript">
+	//membuat function untuk penjumlahan
+	function tambah() {
+		//deklarasi variabel angka ke-1 yang dimasukkan user
+		var angka1=parseFloat(document.hitung.bil1.value)
+		//deklarasi variabel angka ke-2 yang dimasukkan user
+		var angka2=parseFloat(document.hitung.bil2.value)
+
+		//menampilkan hasil penjumlahan
+		document.hitung.hasil.value=angka1+angka2
+	}
+
+	//membuat function untuk pengurangan
+	function kurang() {
+		//deklarasi variabel angka ke-1 yang dimasukkan user
+		var angka1=parseFloat(document.hitung.bil1.value)
+		//deklarasi variabel angka ke-2 yang dimasukkan user
+		var angka2=parseFloat(document.hitung.bil2.value)
+
+		//menampilkan hasil pengurangan
+		document.hitung.hasil.value=angka1-angka2
+	}
+
+	//membuat function untuk perkalian
+	function kali() {
+		//deklarasi variabel angka ke-1 yang dimasukkan user
+		var angka1=parseFloat(document.hitung.bil1.value)
+		//deklarasi variabel angka ke-2 yang dimasukkan user
+		var angka2=parseFloat(document.hitung.bil2.value)
+
+		//menampilkan hasil perkalian
+		document.hitung.hasil.value=angka1*angka2
+	}
+
+	//membuat function untuk pembagian
+	function bagi() {
+		//deklarasi variabel angka ke-1 yang dimasukkan user
+		var angka1=parseFloat(document.hitung.bil1.value)
+		//deklarasi variabel angka ke-2 yang dimasukkan user
+		var angka2=parseFloat(document.hitung.bil2.value)
+
+		//menampilkan hasil pembagian
+		document.hitung.hasil.value=angka1/angka2
+	}
+</script>
+<body>
+<!-- membuat method dengan nama hitung -->
+<form method="post" name="hitung">
+	<!-- membuat textbox untuk menginput nilai angka ke-1 -->
+	<p>Bil 1<input type="text" name="bil1" size="20"></p>
+	<!-- membuat textbox untuk menginput nilai angka ke-2 -->
+	<p>Bil 2<input type="text" name="bil2" size="20"></p>
+
+	<!-- membuat tombol untuk penjumlahan --> 
+	<p><input type="button" name="btnTambah" value="+" onclick=tambah() style="float:left; margin-left:1%"></p>
+	<!-- membuat tombol untuk pengurangan --> 
+	<p><input type="button" name="btnKurang" value="-" onclick=kurang() style="float:left; margin-left:1%"></p>
+	<!-- membuat tombol untuk perkalian --> 
+	<p><input type="button" name="btnKali" value="x" onclick=kali() style="float:left; margin-left:1%"></p>
+	<!-- membuat tombol untuk pembagian --> 
+	<p><input type="button" name="btnBagi" value="/" onclick=bagi() style="float:left; margin-left:1%"></p>
+	<br>
+	<!-- membuat textbox untuk menampilkan hasil -->
+	<p>HASIL<input type="text" name="hasil" size="20"></p>
+	<script language="javascript">
+		document.write("Dimodifikasi Terakhir pada "+document.lastModified);
+	</script>
+</form>
+</body>
+</html>
